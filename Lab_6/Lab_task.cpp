@@ -14,7 +14,11 @@ int main() {
     std::cout << "Lingfeng Li" << std::endl;
     std::cout << "Lab #6: Matrix manipulation" << std::endl << std::endl;
 
-    std::ifstream fin("matrix_input.txt");
+    std::string filename;
+    std::cout <<"please enter the filename containing the matrices: ";
+    std::cin >> filename;
+
+    std:: ifstream fin(filename);
 
     int N;
     fin >> N; // Read the matrix size only once
