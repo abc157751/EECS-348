@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Font Control</title>
+    <style>
+        #paragraph {
+            border: 2px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>CSS Font Control</h2>
+    <p id="paragraph">This is some dummy text.</p>
+    
+    <label for="textColor">Text Color (RGB): </label>
+    <input type="text" id="textColor" placeholder="255,0,0">
+    <br>
+    
+    <label for="bgColor">Background Color (RGB): </label>
+    <input type="text" id="bgColor" placeholder="0,255,0">
+    <br>
+    
+    <label for="borderWidth">Border Width (px): </label>
+    <input type="number" id="borderWidth" placeholder="2">
+    <br>
+    
+    <button onclick="applyStyles()">Apply Styles</button>
+
+    <script>
+        function applyStyles() {
+            var paragraph = document.getElementById('paragraph');
+            var textColor = document.getElementById('textColor').value;
+            var bgColor = document.getElementById('bgColor').value;
+            var borderWidth = document.getElementById('borderWidth').value;
+            
+            paragraph.style.color = 'rgb(' + textColor + ')';
+            paragraph.style.backgroundColor = 'rgb(' + bgColor + ')';
+            paragraph.style.borderWidth = borderWidth + 'px';
+        }
+    </script>
+</body>
+</html>
